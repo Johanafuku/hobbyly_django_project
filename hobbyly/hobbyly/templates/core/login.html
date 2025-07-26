@@ -1,0 +1,19 @@
+{% extends 'core/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-6">
+                {{form.username | as_crispy_field}}
+                {{form.password | as_crispy_field}}           
+            </div>
+        </div>
+       
+        <button class="btn btn-secondary">Iniciar sesión</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'core/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+    <h1>Editar perfil</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-6">
+                {{form.profile_picture | as_crispy_field}}
+                {{form.bio | as_crispy_field}}
+                {{form.birth_date | as_crispy_field}}
+            </div>
+        </div>
+       
+        <button class="btn btn-secondary">Actualizar</button>
+    </form>
+{% endblock %}

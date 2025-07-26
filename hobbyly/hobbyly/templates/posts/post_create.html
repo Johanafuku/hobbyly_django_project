@@ -1,0 +1,20 @@
+{% extends 'core/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+    <h2>Nueva publicación</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-6">
+                {{form.image | as_crispy_field}}
+                {{form.caption | as_crispy_field}}
+                    
+            </div>
+        </div>
+       
+        <button>Publicar</button>
+    </form>
+{% endblock %}

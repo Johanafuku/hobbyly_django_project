@@ -1,0 +1,13 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+<h2>¿Estás seguro de que quieres eliminar este comentario?</h2>
+<p>{{ comment.text }}</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar</button>
+    <a href="{% url 'post_detail' comment.post.pk %}">Cancelar</a>
+  </form>
+{% endblock %}

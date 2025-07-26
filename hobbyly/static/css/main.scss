@@ -1,0 +1,202 @@
+body {
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+    background-color: #F4F6F9;
+    color: #202a3f;
+    max-width: 100%;
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+//HEADER
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .main-menu {
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                padding-right: 15px;
+                a{
+                    text-decoration: none;
+                    color: #202a3f;
+                }
+                a:hover{
+                    color: #A78BFA;
+                }
+                
+            }
+          
+        }
+    }
+}
+
+//HERO
+.hero  {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .hero-text {
+        .hero-title {
+            margin-top: 150px;
+            color: #34D399;
+            font-weight: 600;
+            font-size: 3rem;
+        }
+       
+    }
+    .hero-img {
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+//POSTS
+.post-detail {
+    text-decoration: none;
+    color: #202a3f;
+    font-weight: 600;
+}
+
+.post-detail:hover {
+    color: #A78BFA;
+}
+
+.likedButton {
+    text-decoration: none;
+    color: #c45061;
+}
+
+//COMENTARIOS
+.comentarios {
+    color: #c45061; 
+    a {
+        color: #c45061;  
+    }
+}
+
+//BOTONES
+button {
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #111827;
+    color: #E9D5FF;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #E9D5FF;
+    color: #111827;
+}
+
+//MIEMBROS
+.miembros {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.miembros-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+.miembros-detail {
+    img {
+        width: 100%;
+        border-radius: 4px;
+    }
+    .bio {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    span {
+        font-weight: 600;
+    }
+    .enlace {
+        text-decoration: none;
+        color: #34D399;
+        font-weight: 500;
+    }
+    .enlace:hover {
+        color: #A78BFA;
+    }
+  
+}
+
+//PROFILE
+.profile {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 20px;
+
+    .profile-info {
+
+        .name-follow {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
+
+            h2 {
+                color:#34D399;
+            }
+        }
+        
+    }
+    .profile-img {
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .seguidores {
+        margin-top: 30px;
+        display: flex;
+        gap: 80px;
+        span {
+            font-weight: 600;
+        }
+    }   
+}
+
+.profile-edit {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+    a{
+        text-decoration: none;
+        color: #202a3f;
+        font-weight: 600;
+    }
+    a:hover {
+        color:#A78BFA;
+    }
+}
+
+footer {
+    a{
+        text-decoration: none;
+        color: #202a3f;
+        font-weight: 600;
+    }
+    a:hover {
+        color:#A78BFA;
+    }
+}

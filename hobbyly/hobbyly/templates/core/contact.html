@@ -1,0 +1,17 @@
+{% extends 'core/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+<h2>Contáctanos</h2>
+<form method="post">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-6">
+                 {{ form|crispy }}
+            </div>
+        </div>
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}

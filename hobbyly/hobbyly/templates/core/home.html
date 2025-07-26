@@ -1,0 +1,20 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+<div class="hero">
+    <div class="hero-text">
+        <h1 class="hero-title">Bienvenido a Hobbyly</h1>
+    </div>
+    <div class="hero-img">
+        <img src="/img/hero_img.png" alt="Hobbyly">
+    </div>
+</div>
+    <section >
+        
+        {% for post in last_posts %}
+            {% include '_includes/posts/_post.html' %}
+        {% endfor %}
+    </section>
+{% endblock %}

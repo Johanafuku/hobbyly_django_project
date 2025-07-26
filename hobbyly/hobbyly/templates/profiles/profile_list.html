@@ -1,0 +1,29 @@
+{% extends 'core/layout.html' %}
+
+{% block head_title %}Hobbyly {% endblock %}
+
+{% block page_content %}
+<h2 class="miembros">Miembros</h2>
+
+<div class="miembros-list">
+    {% for profile in profiles %}
+    <article class="miembros-detail">
+        <p>
+            {% if profile.profile_picture %}
+            <img src="{{profile.profile_picture.url}}" alt="">
+            {% else %}
+            <img src="/img/sin_imagen.jpg" alt="" height="240px">
+            {% endif %}
+        </p>
+        <h3 style="word-wrap: break-word; font-size: 1.3rem;">{{profile.user.username}} </h3>
+        <p class="bio">{{profile.bio|default_if_none:'sin información'}} </p>
+        <p class="fecha"><span>Cumpleaños:</span> {{profile.birth_date|default_if_none:'sin información'}} </p>
+        <p><span>Seguidores: </span>{{profile.following.count}} </p>
+        <p><a href="{% url 'profile_detail' profile.pk %}" class="enlace">Ver perfil</a></p>
+    </article>
+
+{% endfor %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<header>
+    <div class="container header">
+
+        <h1>Hobbyly</h1>
+
+        <nav class="main-menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'profile_list' %}">Miembros</a></li>
+                {% if not request.user.is_authenticated %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Registro</a></li>
+                {% endif %}
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'profile_detail' request.user.profile.pk %}">Mi perfil</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+</header>
