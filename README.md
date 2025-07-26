@@ -1,0 +1,1 @@
+# hobbyly_django_project
